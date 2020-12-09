@@ -17,7 +17,7 @@ export class HomePage {
 
   async delete(i) {
     let alert = await this.alertController.create({
-      title: 'Suppression',
+      header: 'Suppression',
       message: 'Êtes-vous sur de vouloir supprimer cette tâche?',
       buttons: [
         {
@@ -39,7 +39,7 @@ export class HomePage {
 
   async complete(i) {
     let prompt = await this.alertController.create({
-      title: 'tache effectué',
+      header: 'tache effectué',
       message: 'Êtes-vous sur d\'avoir terminé votre tâche?',
       buttons: [
         {

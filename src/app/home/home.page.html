@@ -13,7 +13,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-item *ngFor="let task of items; let i = index">
-   <ion-checkbox click='complete(i)'></ion-checkbox>
+   <ion-checkbox (click)='complete(i)'></ion-checkbox>
     <ion-label>{{ task }}</ion-label>
     <ion-button (click)='delete(i)'>
       <ion-icon name="trash"></ion-icon>
