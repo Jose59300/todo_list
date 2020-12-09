@@ -12,32 +12,12 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-item>
-    <ion-checkbox></ion-checkbox>
-    <ion-label>Acheter un pangolin</ion-label>
+  <ion-item *ngFor="let task of items; let i = index">
+   <ion-checkbox click='complete(i)'></ion-checkbox>
+    <ion-label>{{ task }}</ion-label>
     <ion-button (click)='delete(i)'>
       <ion-icon name="trash"></ion-icon>
     </ion-button>
   </ion-item>
-  <ion-item>
-    <ion-checkbox></ion-checkbox>
-    <ion-label>Exterminer les visons</ion-label>
-    <ion-button (click)='delete(i)'>
-      <ion-icon  name="trash"></ion-icon>
-    </ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-checkbox></ion-checkbox>
-    <ion-label>Aller a la manif contre l'article 24</ion-label>
-    <ion-button (click)='delete(i)'>
-      <ion-icon  name="trash"></ion-icon>
-    </ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-checkbox></ion-checkbox>
-    <ion-label>Proposer un feat a Emmanuel Macron</ion-label>
-    <ion-button (click)='delete(i)'>
-      <ion-icon  name="trash"></ion-icon>
-    </ion-button>
-  </ion-item>
+
 </ion-content>
